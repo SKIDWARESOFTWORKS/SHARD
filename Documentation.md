@@ -9,7 +9,7 @@ SHARD can be used for almost anything you need. With a familiar syntax. Below ar
 # FUNCTION ASSIGNMENT
 ```
 func greet(name) {
-   logln("Hello, {name}!")
+   logln("Hello, " + name)
 }
 ```
 
