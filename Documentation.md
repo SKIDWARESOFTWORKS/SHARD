@@ -67,9 +67,38 @@ Just write whatever code you're executing in there!
 Additionally, you can also write arguments within the functions like this.
 ```lua
 function main(numberone, numbertwo) {
-   echoln(v"
+   output = numberone + numbertwo
+   echoln(v"{numberone} + {numbertwo} = {output}")
+}
+```
+It is important to note that functions must be called in order to be executed, with the exception of the main() function, that will run automatically if it exists. Any other function must be called to be executed.
+
+## CALLING FUNCTIONS
+To call a function, just type the functions name in this format: ``function_name()``.
+It is important to note that if your function has arguments, it wont execute correctly if the arguments are not filled out.
+For example, if the function is adding 2 numbers, it needs the 1st argument for the first number, and the 2nd argument for the second number. However, if one or more are not specified, the function will error.
+
+*This code will error:*
+```lua
+function addnumbers(num, num2) {
+   output = num + num2
+   echoln(v"{num} + {num2} = {output}
 }
 
+addnumbers()
+
+```
+
+*This code wil run as it is supposed to:*
+```lua
+function addnumbers(num, num2) {
+   output = num + num2
+   echoln(v"{num} + {num2} = {output}
+}
+
+addnumbers(32, 40)
+
+```
 
 # CONDITIONALS
 ``` 
