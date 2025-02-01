@@ -54,7 +54,21 @@ echoln(v"You just aged 1 year and are now {age} years old!")
 ```
 
 
-# FUNCTION ASSIGNMENT
+# FUNCTIONS
+## DEFINING FUNCTIONS
+To define a function, simply do:
+```lua
+function main() {
+   <Put whatever code you need here>
+}
+```
+Just write whatever code you're executing in there!
+
+Additionally, you can also write arguments within the functions like this.
+```lua
+function main(numberone, numbertwo) {
+   echoln(v"
+}
 
 
 # CONDITIONALS
