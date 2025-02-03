@@ -1,6 +1,22 @@
 # ❄ SHARD ❄ || Documentation
 
-SHARD can be used for almost anything you need and has an 
+SHARD can be used for almost anything you need! It is a programming language that's sole purpose is to make cybersecurity and hacking a priority in coding, and to make it easy at that!
+
+# THE BASICS
+## PRINTING
+Printing things are easy! Just use the ``echoln()``. Here are some different ways you can use it:
+
+```
+echoln() - Prints a blank line that can be used to seperate text.
+
+echoln('text here') - Prints text.
+
+echoln(variable) - Prints a variable.
+
+echoln(v'The variable is equal to: {variable}') - Joins text and a variable into one string.
+
+echoln('\nHi there!') - Creates a line break and prints the text, sort of like ``echoln()`` and ``echoln('text here')``.
+```
 
 # COMMENTS
 
@@ -22,14 +38,17 @@ To define a variable with a string, you can do either ``let {variable} = 'string
 
 Unlike rust, there is no ``i32``, ``u32``, ``f32``, or anything of the sort - it will detect what type of variable it is automatically!
 
-It is important to note that to DEFINE variable, you must do ``let {variable} = {value}``, however this will not let you change the value unless
-you define it again.
+It is important to note that to DEFINE a variable, you must do ``let {variable} = {value}``, however this will not let you change the value unless you define it again.
 
 To make it so that you don't have to redefine it to change the value, simply define it as a mutable variable by doing ``let mut {variable} = {value}"``!
 Then, if you want to change the value, all you do is ``{variable} = {value}``, like in python!
 
 ## PRINTING VARIABLES
 To print a variable in SHARD, do ``echoln(variable)``. If you want to print it in a string, do ``echoln(v'The variable equals {variable})``
+
+## VARIABLES INSIDE OF FUNCTIONS
+By default, variables are mutable if they are arguments in a function. (This will not be covered in the overview, due to the fact that
+this section comes before functions. However, it *is* covered in the *Functions Overview*.)
 
 ## VARIABLE OVERVIEW
 Here is an example that looks at everything we've learned about ``variables``:
@@ -51,6 +70,15 @@ age = 26
 // with an error.
 
 echoln(v"You just aged 1 year and are now {age} years old!")
+```
+
+Output:
+```
+John
+25
+Your name is John.
+You are 25 years old.
+You just aged 1 year and are now 26 years old!
 ```
 
 
@@ -97,7 +125,23 @@ function addnumbers(num, num2) {
 }
 
 addnumbers(32, 40)
+```
 
+## FUNCTIONS OVERVIEW
+Here is an example that looks at everything we've learned about ``variables``:
+```lua
+function makemoney(money, account) {
+   account = account + money
+   echoln(f'Your account now holds ${money}!')
+   echoln()
+}
+
+makemoney(30, 20)
+```
+
+Output:
+```js
+Your account now holds $50!
 ```
 
 # CONDITIONALS
