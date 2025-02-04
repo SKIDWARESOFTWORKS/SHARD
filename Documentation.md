@@ -15,18 +15,29 @@ echoln(variable) - Prints a variable.
 
 echoln(v'The variable is equal to: {variable}') - Joins text and a variable into one string.
 
-echoln('\nHi there!') - Creates a line break and prints the text, sort of like ``echoln()`` and ``echoln('text here')``.
+echoln('\nHi there!') - Creates a line break and prints the text.
+
+echoln('Hi', variable) - Prints two or more components. When using the comma, it automatically makes a space.
+
+echoln('Hi ' + variable) - Prints two or more components. You must manually add a space if you have a string.
 ```
 
-# COMMENTS
+You can either use "" for strings or '', it doesn't matter.
 
 ## WRITING COMMENTS
 To write a comment, just add '//' before whatever you're commenting out.
 
-## COMMENTS OVERVIEW
-Here is an example that looks at everything we've learned about ``comments``:
+## BASICS OVERVIEW
+Here is an example that looks at everything we've learned about ``the basics``:
 ```rust
-// This is how you comment something out!
+let name = 'John' // <--- You will learn this in the next section
+echoln(v'Hello {name}!, "\nYour name *is* " + name, 'right?')
+```
+
+Output:
+```
+Hello John!
+Your name *is* John right?
 ```
 
 
@@ -44,7 +55,7 @@ To make it so that you don't have to redefine it to change the value, simply def
 Then, if you want to change the value, all you do is ``{variable} = {value}``, like in python!
 
 ## PRINTING VARIABLES
-To print a variable in SHARD, do ``echoln(variable)``. If you want to print it in a string, do ``echoln(v'The variable equals {variable})``
+To print a variable in SHARD, do ``echoln(variable)``. If you want to print it in a string, do ``echoln(v'The variable equals {variable}.)``
 
 ## VARIABLES INSIDE OF FUNCTIONS
 By default, variables are mutable if they are arguments in a function. (This will not be covered in the overview, due to the fact that
@@ -128,7 +139,7 @@ addnumbers(32, 40)
 ```
 
 ## FUNCTIONS OVERVIEW
-Here is an example that looks at everything we've learned about ``variables``:
+Here is an example that looks at everything we've learned about ``functions``:
 ```lua
 function makemoney(money, account) {
    account = account + money
